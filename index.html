@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Từ Vựng Sơ Cấp 1 - Bài 1</title>
+<title>Quiz Từ Vựng 2A - Bài 2</title>
 <style>
   :root {
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
     --bg-gradient: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 100%);
     --card-bg: #ffffff;
     --text-main: #1e293b;
@@ -51,7 +51,7 @@
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 24px;
     margin: 0 0 6px 0;
     color: #312e81;
   }
@@ -87,7 +87,7 @@
 
   .question-box {
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 800;
     margin: 20px 0 28px 0;
     color: #0f172a;
@@ -113,18 +113,11 @@
     cursor: pointer;
     transition: all 0.2s ease;
     color: var(--text-main);
-    display: flex;
-    align-items: center;
   }
 
   .answer-btn:hover:not(:disabled) {
     background: #eef2ff;
     border-color: var(--primary);
-    transform: translateY(-1px);
-  }
-
-  .answer-btn:disabled {
-    cursor: default;
   }
 
   .answer-btn.correct {
@@ -157,15 +150,11 @@
     font-size: 17px;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
+    transition: background 0.2s ease;
   }
 
   .next-btn:hover, .restart-btn:hover {
     background: var(--primary-hover);
-  }
-
-  .next-btn:active, .restart-btn:active {
-    transform: scale(0.99);
   }
 
   .settings {
@@ -185,27 +174,21 @@
     font-size: 14px;
     color: var(--text-main);
     font-weight: 500;
-    outline: none;
   }
 
-  .hidden {
-    display: none !important;
-  }
+  .hidden { display: none !important; }
 
-  .result-box {
-    text-align: center;
-    padding: 20px 0;
-  }
+  .result-box { text-align: center; padding: 20px 0; }
 
   .final-score {
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 900;
     color: var(--primary);
     margin: 12px 0;
   }
 
   .result-msg {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-muted);
     margin-bottom: 24px;
   }
@@ -217,8 +200,8 @@
   <!-- Quiz Section -->
   <div id="quiz-section">
     <header>
-      <h1>🇰🇷 Quiz Sơ Cấp 1 — Bài 1</h1>
-      <div class="sub">Luyện tập từ vựng tiếng Hàn S & W</div>
+      <h1>🇰🇷 Quiz Sơ Cấp 1 — Bài 2</h1>
+      <div class="sub">Chủ đề: 취미가 뭐예요? (Sở thích của bạn là gì?)</div>
     </header>
 
     <div class="progress-container">
@@ -245,7 +228,7 @@
         <option value="10">10 câu</option>
         <option value="20">20 câu</option>
         <option value="30">30 câu</option>
-        <option value="56">Tất cả (56 câu)</option>
+        <option value="38">Tất cả (38 câu)</option>
       </select>
     </div>
   </div>
@@ -261,65 +244,47 @@
 
 <script>
   const WORDS = [
-    // S【1과】
-    {"ko": "성명", "vi": "Tên họ / Họ tên"},
-    {"ko": "성별", "vi": "Giới tính"},
-    {"ko": "생년월일", "vi": "Ngày tháng năm sinh"},
-    {"ko": "직업", "vi": "Công việc / Nghề nghiệp"},
-    {"ko": "국적", "vi": "Quốc tịch"},
-    {"ko": "종교", "vi": "Tôn giáo"},
-    {"ko": "연락처", "vi": "Thông tin liên hệ"},
-    {"ko": "주소", "vi": "Địa chỉ"},
-    {"ko": "전화", "vi": "Số điện thoại"},
-    {"ko": "이메일", "vi": "Email"},
-    {"ko": "매일", "vi": "Mỗi ngày"},
-    {"ko": "매주", "vi": "Mỗi tuần"},
-    {"ko": "매달", "vi": "Mỗi tháng"},
-    {"ko": "매년", "vi": "Mỗi năm"},
-    {"ko": "항상", "vi": "Luôn luôn"},
-    {"ko": "자주", "vi": "Thường xuyên"},
-    {"ko": "가끔", "vi": "Thỉnh thoảng"},
-    {"ko": "(이름을) 부르다", "vi": "Gọi là (tên)"},
-    {"ko": "뵙다", "vi": "Gặp (kính ngữ)"},
-    {"ko": "그냥", "vi": "Chỉ là / Tự nhiên"},
-    {"ko": "(학교에) 들어가다", "vi": "Trúng tuyển / Vào trường"},
-    {"ko": "이유", "vi": "Lý do"},
-    {"ko": "평일", "vi": "Ngày trong tuần"},
-    {"ko": "사 오다", "vi": "Mua về"},
-    {"ko": "초대를 받다", "vi": "Được mời"},
-    {"ko": "코미디 영화", "vi": "Phim hài"},
-    {"ko": "액션 영화", "vi": "Phim hành động"},
-    {"ko": "소설책", "vi": "Sách tiểu thuyết"},
-    {"ko": "시간이 나다", "vi": "Rảnh rỗi / Có thời gian"},
-    {"ko": "스페인어", "vi": "Tiếng Tây Ban Nha"},
-    {"ko": "언어", "vi": "Ngôn ngữ"},
-    {"ko": "문화", "vi": "Văn hóa"},
-    {"ko": "관심", "vi": "Hứng thú / Quan tâm"},
-    {"ko": "중남미", "vi": "Trung Nam Mỹ"},
-    {"ko": "정도", "vi": "Mức độ / Khoảng"},
-    {"ko": "유명하다", "vi": "Nổi tiếng"},
-    {"ko": "~에 대해(서)", "vi": "Về (vấn đề / chủ đề)"},
-    {"ko": "발표하다", "vi": "Phát biểu / Trình bày"},
-    {"ko": "글자", "vi": "Chữ cái / Ký tự"},
-    {"ko": "제일", "vi": "Nhất"},
-    {"ko": "친하다", "vi": "Thân thiết"},
-    {"ko": "성", "vi": "Họ (trong họ tên)"},
-    {"ko": "빼다", "vi": "Trừ ra / Bỏ ra"},
-    {"ko": "형제들", "vi": "Anh em"},
-    {"ko": "비슷하다", "vi": "Giống nhau / Tương tự"},
+    // S【2과】 (31 từ)
+    {"ko": "사진을 찍다", "vi": "Chụp ảnh"},
+    {"ko": "음악을 듣다", "vi": "Nghe nhạc"},
+    {"ko": "춤을 추다", "vi": "Nhảy / Múa"},
+    {"ko": "그림을 그리다", "vi": "Vẽ tranh"},
+    {"ko": "인형을 모으다", "vi": "Sưu tầm búp bê"},
+    {"ko": "인터넷을 하다", "vi": "Lướt web / Dùng Internet"},
+    {"ko": "영화 감상", "vi": "Xem phim / Thưởng thức phim"},
+    {"ko": "음악 감상", "vi": "Nghe nhạc / Thưởng thức âm nhạc"},
+    {"ko": "등산", "vi": "Leo núi"},
+    {"ko": "독서", "vi": "Đọc sách"},
+    {"ko": "여행", "vi": "Du lịch"},
+    {"ko": "요리", "vi": "Nấu ăn"},
+    {"ko": "낚시", "vi": "Câu cá"},
+    {"ko": "운동", "vi": "Thể thao / Tập thể dục"},
+    {"ko": "컴퓨터 게임", "vi": "Chơi game máy tính"},
+    {"ko": "아주", "vi": "Rất"},
+    {"ko": "별로", "vi": "Không ... lắm"},
+    {"ko": "전혀", "vi": "Hoàn toàn không"},
+    {"ko": "야구(를) 하다", "vi": "Chơi bóng chày"},
+    {"ko": "외국어", "vi": "Ngoại ngữ"},
+    {"ko": "라틴 댄스", "vi": "Điệu nhảy Latin"},
+    {"ko": "동호회", "vi": "Câu lạc bộ"},
+    {"ko": "가입하다", "vi": "Gia nhập / Đăng ký"},
+    {"ko": "모이다", "vi": "Tập hợp / Tụ họp"},
+    {"ko": "연습실", "vi": "Phòng luyện tập"},
+    {"ko": "회비", "vi": "Hội phí"},
+    {"ko": "블로그", "vi": "Blog"},
+    {"ko": "참", "vi": "Thật là / Quả là"},
+    {"ko": "문화 센터", "vi": "Trung tâm văn hóa"},
+    {"ko": "(사진을) 올리다", "vi": "Đăng / Tải (ảnh) lên"},
+    {"ko": "여러 가지", "vi": "Nhiều loại / Đa dạng"},
 
-    // W【1과】
-    {"ko": "교회", "vi": "Nhà thờ"},
-    {"ko": "언제나", "vi": "Lúc nào cũng"},
-    {"ko": "물어보다", "vi": "Hỏi"},
-    {"ko": "빌리다", "vi": "Mượn, vay"},
-    {"ko": "가져오다", "vi": "Mang theo"},
-    {"ko": "켜다", "vi": "Bật"},
-    {"ko": "모르다", "vi": "Không biết"},
-    {"ko": "줄을 서다", "vi": "Xếp hàng"},
-    {"ko": "수첩", "vi": "Sổ tay"},
-    {"ko": "뛰어가다", "vi": "Chạy tới"},
-    {"ko": "잊어버리다", "vi": "Quên mất"}
+    // W【2과】 (7 từ)
+    {"ko": "외우다", "vi": "Học thuộc lòng"},
+    {"ko": "힘들다", "vi": "Vất vả / Khó khăn"},
+    {"ko": "선수", "vi": "Vận động viên / Cầu thủ"},
+    {"ko": "한자", "vi": "Chữ Hán"},
+    {"ko": "잃어버리다", "vi": "Đánh mất / Làm mất"},
+    {"ko": "이해하다", "vi": "Hiểu / Thấu hiểu"},
+    {"ko": "시끄럽다", "vi": "Ồn ào"}
   ];
 
   let pool = [];
@@ -377,7 +342,6 @@
     feedbackEl.textContent = "";
     nextBtn.classList.add("hidden");
 
-    // Distractors
     const otherItems = shuffle(WORDS.filter(w => w.ko !== currentItem.ko)).slice(0, 3);
     let choices = [correctAnswer];
     otherItems.forEach(item => {
@@ -439,13 +403,13 @@
     finalScoreEl.textContent = `${score}/${pool.length} (${percentage}%)`;
 
     if (percentage >= 90) {
-      resultMessageEl.textContent = "🔥 Xuất sắc! Bạn đã thuộc rất kỹ từ vựng.";
+      resultMessageEl.textContent = "🔥 Xuất sắc! Bạn thuộc rất tốt từ vựng Bài 2.";
     } else if (percentage >= 70) {
-      resultMessageEl.textContent = "👏 Khá tốt! Luyện tập thêm để đạt điểm tuyệt đối nhé.";
+      resultMessageEl.textContent = "👏 Khá tốt! Luyện tập thêm để nhớ kỹ hơn.";
     } else if (percentage >= 50) {
-      resultMessageEl.textContent = "💪 Tạm ổn! Nên ôn lại các từ bạn chọn sai.";
+      resultMessageEl.textContent = "💪 Tạm ổn! Ôn lại vài từ sai nhé.";
     } else {
-      resultMessageEl.textContent = "📚 Cố lên! Hãy ôn tập lại danh sách từ vựng và thử lại nhé.";
+      resultMessageEl.textContent = "📚 Cố lên! Hãy xem lại danh sách từ vựng và thử lại.";
     }
   }
 
@@ -459,6 +423,3 @@
 
 </body>
 </html>
-```eof
-
-I have generated the single-file HTML interactive Korean vocabulary quiz application containing all 56 words from Lesson 1 (S & W sets).
