@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Từ Vựng 2A - Bài 3</title>
+<title>Quiz 2A - Bài 4</title>
 <style>
   :root {
     --primary: #059669;
@@ -200,8 +200,8 @@
   <!-- Quiz Section -->
   <div id="quiz-section">
     <header>
-      <h1>🇰🇷 Quiz 2A — Bài 3</h1>
-      <div class="sub">Chủ đề: 콘서트에 가 봤어요? (Trải nghiệm)</div>
+      <h1>🇰🇷 Quiz 2A — Bài 4</h1>
+      <div class="sub">Chủ đề: 옷이 좀 큰 것 같아요 (Trang phục & Mua sắm)</div>
     </header>
 
     <div class="progress-container">
@@ -228,7 +228,7 @@
         <option value="10">10 câu</option>
         <option value="20">20 câu</option>
         <option value="30">30 câu</option>
-        <option value="72">Tất cả (72 câu)</option>
+        <option value="59">Tất cả (59 câu)</option>
       </select>
     </div>
   </div>
@@ -244,81 +244,68 @@
 
 <script>
   const WORDS = [
-    // S【3과】
-    {"ko": "콘서트", "vi": "Buổi hòa nhạc / Concert"},
-    {"ko": "음악회", "vi": "Buổi biểu diễn âm nhạc"},
-    {"ko": "연극", "vi": "Vở kịch"},
-    {"ko": "뮤지컬", "vi": "Nhạc kịch"},
-    {"ko": "전시회", "vi": "Triển lãm"},
-    {"ko": "축제", "vi": "Lễ hội"},
-    {"ko": "불꽃놀이", "vi": "Bắn pháo hoa"},
-    {"ko": "사물놀이", "vi": "Múa nhạc cụ truyền thống 4 loại"},
-    {"ko": "배낭여행", "vi": "Du lịch ba lô / Du lịch bụi"},
-    {"ko": "아르바이트", "vi": "Việc làm thêm"},
-    {"ko": "번지 점프", "vi": "Nhảy Bungee"},
-    {"ko": "스쿠버 다이빙", "vi": "Lặn biển"},
-    {"ko": "박물관", "vi": "Bảo tàng"},
-    {"ko": "미술관", "vi": "Bảo tàng mỹ thuật"},
-    {"ko": "공연장", "vi": "Sân khấu biểu diễn / Nhà hát"},
-    {"ko": "놀이공원", "vi": "Công viên giải trí"},
-    {"ko": "시간", "vi": "Tiếng / Giờ / Thời gian"},
-    {"ko": "달", "vi": "Tháng (đếm số lượng)"},
-    {"ko": "분", "vi": "Phút"},
-    {"ko": "일", "vi": "Ngày"},
-    {"ko": "주[주일]", "vi": "Tuần"},
-    {"ko": "개월", "vi": "Tháng (khoảng thời gian)"},
-    {"ko": "년", "vi": "Năm"},
-    {"ko": "하루", "vi": "Một ngày"},
-    {"ko": "갔다 오다", "vi": "Đi rồi về"},
-    {"ko": "생선회", "vi": "Gỏi cá / Sashimi"},
-    {"ko": "요가", "vi": "Yoga"},
-    {"ko": "사막", "vi": "Sa mạc"},
-    {"ko": "온천", "vi": "Suối nước nóng"},
-    {"ko": "사흘", "vi": "Ba ngày"},
-    {"ko": "다시", "vi": "Lại / Lần nữa"},
-    {"ko": "빌려 주다", "vi": "Cho mượn"},
-    {"ko": "벚꽃", "vi": "Hoa anh đào"},
-    {"ko": "국제", "vi": "Quốc tế"},
-    {"ko": "영화제", "vi": "Liên hoan phim"},
-    {"ko": "재즈", "vi": "Nhạc Jazz"},
-    {"ko": "존경하다", "vi": "Tôn kính / Kính trọng"},
-    {"ko": "왕", "vi": "Vua"},
-    {"ko": "한라산", "vi": "Núi Halla"},
-    {"ko": "닭", "vi": "Gà"},
-    {"ko": "자리", "vi": "Chỗ / Chỗ ngồi"},
-    {"ko": "꼭", "vi": "Nhất định"},
-    {"ko": "출장", "vi": "Đi công tác"},
-    {"ko": "중요하다", "vi": "Quan trọng"},
-    {"ko": "덕수궁", "vi": "Cung Deoksu"},
-    {"ko": "글쎄요", "vi": "Để xem đã / Ờ thì..."},
-    {"ko": "특히", "vi": "Đặc biệt / Nhất là"},
-    {"ko": "가장", "vi": "Nhất"},
-    {"ko": "기억에 남다", "vi": "Đáng nhớ / Đọng lại trong ký ức"},
-    {"ko": "여러 나라", "vi": "Nhiều quốc gia"},
-    {"ko": "감독", "vi": "Đạo diễn"},
-    {"ko": "배우", "vi": "Diễn viên"},
-    {"ko": "낙타", "vi": "Lạc đà"},
-    {"ko": "유럽", "vi": "Châu Âu"},
-    {"ko": "말하기 대회", "vi": "Cuộc thi nói"},
-    {"ko": "대회에 나가다", "vi": "Tham gia cuộc thi"},
-    {"ko": "상을 받다", "vi": "Nhận giải thưởng"},
-    {"ko": "경험", "vi": "Kinh nghiệm / Trải nghiệm"},
+    // S【4과】
+    {"ko": "블라우스", "vi": "Áo sơ mi nữ / Áo blouse"},
+    {"ko": "스웨터", "vi": "Áo len"},
+    {"ko": "양복", "vi": "Bộ âu phục / Vest"},
+    {"ko": "티셔츠", "vi": "Áo phông"},
+    {"ko": "청바지", "vi": "Quần jeans / Quần bò"},
+    {"ko": "양말", "vi": "Tất / Vớ"},
+    {"ko": "넥타이", "vi": "Cà vạt"},
+    {"ko": "장갑", "vi": "Găng tay"},
+    {"ko": "스카프", "vi": "Khăn quàng cổ"},
+    {"ko": "입다", "vi": "Mặc (quần, áo)"},
+    {"ko": "쓰다", "vi": "Đội (mũ), đeo (kính)"},
+    {"ko": "끼다", "vi": "Đeo (găng tay, nhẫn)"},
+    {"ko": "하다", "vi": "Thắt (cà vạt), quàng (khăn)"},
+    {"ko": "신다", "vi": "Đi / Mang (giày, dép, tất)"},
+    {"ko": "마음에 들다", "vi": "Hài lòng / Thích"},
+    {"ko": "마음에 안 들다", "vi": "Không hài lòng"},
+    {"ko": "잘 어울리다", "vi": "Rất hợp"},
+    {"ko": "잘 안 어울리다", "vi": "Không hợp lắm"},
+    {"ko": "사이즈", "vi": "Kích cỡ / Size"},
+    {"ko": "가격", "vi": "Giá cả"},
+    {"ko": "색깔", "vi": "Màu sắc"},
+    {"ko": "길이", "vi": "Chiều dài"},
+    {"ko": "좀 크다", "vi": "Hơi to / Hơi rộng"},
+    {"ko": "잘 맞다", "vi": "Vừa vặn"},
+    {"ko": "좀 작다", "vi": "Hơi nhỏ / Hơi chật"},
+    {"ko": "비싸다", "vi": "Đắt"},
+    {"ko": "싸다", "vi": "Rẻ"},
+    {"ko": "밝다", "vi": "Sáng"},
+    {"ko": "어둡다", "vi": "Tối"},
+    {"ko": "길다", "vi": "Dài"},
+    {"ko": "짧다", "vi": "Ngắn"},
+    {"ko": "옷값", "vi": "Giá tiền quần áo"},
+    {"ko": "맛", "vi": "Hương vị / Vị"},
+    {"ko": "내용", "vi": "Nội dung"},
+    {"ko": "디자인", "vi": "Thiết kế"},
+    {"ko": "유행하다", "vi": "Thịnh hành / Mốt"},
+    {"ko": "훨씬", "vi": "Hơn hẳn / Hơn nhiều"},
+    {"ko": "시골", "vi": "Nông thôn / Quê"},
+    {"ko": "건강하다", "vi": "Khỏe mạnh"},
+    {"ko": "굽이 높다", "vi": "Đế cao / Gót cao"},
+    {"ko": "교환하다", "vi": "Đổi (hàng)"},
+    {"ko": "환불하다", "vi": "Hoàn tiền / Trả lại hàng"},
+    {"ko": "등산화", "vi": "Giày leo núi"},
+    {"ko": "필요하다", "vi": "Cần thiết"},
+    {"ko": "절약하다", "vi": "Tiết kiệm"},
+    {"ko": "직접", "vi": "Trực tiếp"},
+    {"ko": "주문하다", "vi": "Đặt hàng / Gọi món"},
+    {"ko": "면접", "vi": "Phỏng vấn"},
+    {"ko": "물어보다", "vi": "Hỏi / Hỏi thăm"},
+    {"ko": "노량진", "vi": "Noryangjin"},
+    {"ko": "수산 시장", "vi": "Chợ hải sản"},
+    {"ko": "동네", "vi": "Xóm / Làng / Khu phố"},
+    {"ko": "싱싱하다", "vi": "Tươi / Tươi sống"},
+    {"ko": "넣다", "vi": "Bỏ vào / Cho vào"},
+    {"ko": "고추장", "vi": "Tương ớt Hàn Quốc"},
 
-    // W【3과】
-    {"ko": "옛날", "vi": "Ngày xưa / Trước đây"},
-    {"ko": "용산", "vi": "Yongsan"},
-    {"ko": "놀이기구", "vi": "Trò chơi cảm giác mạnh"},
-    {"ko": "삼바", "vi": "Điệu nhảy Samba"},
-    {"ko": "발레", "vi": "Múa Ballet"},
-    {"ko": "공연", "vi": "Buổi biểu diễn"},
-    {"ko": "만리장성", "vi": "Vạn Lý Trường Thành"},
-    {"ko": "코끼리", "vi": "Con voi"},
-    {"ko": "며칠", "vi": "Mấy ngày / Ngày mấy"},
-    {"ko": "빌려 주다", "vi": "Cho vay / Cho mượn"},
-    {"ko": "크게 쓰다", "vi": "Viết to"},
-    {"ko": "대학원", "vi": "Cao học"},
-    {"ko": "자리", "vi": "Chỗ ngồi"},
-    {"ko": "고르다", "vi": "Chọn lựa"}
+    // W【4과】
+    {"ko": "결혼식", "vi": "Lễ kết hôn / Đám cưới"},
+    {"ko": "헤어지다", "vi": "Chia tay"},
+    {"ko": "돈을 벌다", "vi": "Kiếm tiền"},
+    {"ko": "바라다", "vi": "Mong muốn / Hi vọng"}
   ];
 
   let pool = [];
@@ -437,13 +424,13 @@
     finalScoreEl.textContent = `${score}/${pool.length} (${percentage}%)`;
 
     if (percentage >= 90) {
-      resultMessageEl.textContent = "🔥 Xuất sắc! Bạn thuộc từ vựng Bài 3 rất siêu.";
+      resultMessageEl.textContent = "🔥 Xuất sắc! Bạn thuộc từ vựng Bài 4 rất siêu.";
     } else if (percentage >= 70) {
       resultMessageEl.textContent = "👏 Khá tốt! Luyện tập thêm chút nữa là hoàn hảo.";
     } else if (percentage >= 50) {
       resultMessageEl.textContent = "💪 Tạm ổn! Hãy thử lại để tăng điểm nhé.";
     } else {
-      resultMessageEl.textContent = "📚 Cố lên! Hãy ôn lại từ vựng Bài 3 và làm lại.";
+      resultMessageEl.textContent = "📚 Cố lên! Hãy ôn lại từ vựng Bài 4 và làm lại.";
     }
   }
 
